@@ -1,5 +1,7 @@
 import '../models/content_models.dart';
 
+/// Fallback roster for Committee Clusters. Keep in sync with
+/// [assets/data/event.json] `committees`.
 List<CommitteeCluster> defaultCommitteeRoster() {
   return const [
     CommitteeCluster(
@@ -96,18 +98,21 @@ List<CommitteeCluster> defaultCommitteeRoster() {
           name: 'Abby Amor',
           imageAsset: 'assets/images/committee/prog/prog_abby.png',
         ),
-        Person(name: 'John Amiel Quirol'),
         Person(
-          name: 'Jhay',
+          name: 'Jhay Centus',
           imageAsset: 'assets/images/committee/prog/prog_jhay.png',
         ),
         Person(
-          name: 'Irish',
+          name: 'Irish Duroy',
           imageAsset: 'assets/images/committee/prog/prog_irish.png',
         ),
         Person(
-          name: 'Ken',
+          name: 'Ken Sampayan',
           imageAsset: 'assets/images/committee/prog/prog_ken_1.png',
+        ),
+        Person(
+          name: 'Shiem Angel Florano',
+          imageAsset: 'assets/images/committee/prog/prog_shiem.png',
         ),
       ],
     ),
@@ -139,7 +144,6 @@ List<CommitteeCluster> defaultCommitteeRoster() {
           name: 'Katherine Mapa',
           imageAsset: 'assets/images/committee/gserv/gserv_katherine.png',
         ),
-        Person(name: 'Ezekiel Jazmin'),
         Person(
           name: 'Niño Sampayan',
           imageAsset: 'assets/images/committee/prog/prog_nino.png',
@@ -150,10 +154,6 @@ List<CommitteeCluster> defaultCommitteeRoster() {
       id: 'finance',
       name: 'Finance Cluster',
       members: [
-        Person(
-          name: 'Shiem Angel Florano',
-          imageAsset: 'assets/images/committee/prog/prog_shiem.png',
-        ),
         Person(
           name: 'Eduardo Empelis Jr.',
           imageAsset: 'assets/images/speakers/kk_eduardo.png',
@@ -169,7 +169,7 @@ List<CommitteeCluster> defaultCommitteeRoster() {
           imageAsset: 'assets/images/committee/socom/socom_froilan.png',
         ),
         Person(
-          name: 'Jhay Centus',
+          name: 'James Adriane Registos',
           imageAsset: 'assets/images/committee/socom/socom_jhay.png',
         ),
         Person(

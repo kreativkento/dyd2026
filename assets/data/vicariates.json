@@ -6,131 +6,72 @@
       {
         "id": "our-lady-annunciation-cathedral",
         "name": "Our Lady of the Annunciation Cathedral-Parish",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Potenciano Dulay",
         "address": "Catarman, 6400 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1596",
-        "titular": "Our Lady of the Annunciation",
-        "feastDate": "29-Aug",
-        "contact": "Tel.: (055) 354-8475",
-        "delegates": []
+        "titular": "Our Lady of the Annunciation"
       },
       {
         "id": "nazareno-st-rock-cawayan",
         "name": "Diocesan Shrine of Nuestro Padre Jesus Nazareno, St. Rock the Healer Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Roberto Cisneros",
         "address": "Cawayan, 6400 Catarman, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "2007",
-        "titular": "St. Rock the Healer",
-        "feastDate": "18-Aug",
-        "delegates": []
+        "titular": "St. Rock the Healer"
       },
       {
         "id": "omph-dalakit",
         "name": "Our Mother of Perpetual Help Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Jose Sumayop, Jr",
         "address": "Dalakit, 6400 Catarman, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "2008",
-        "titular": "Our Mother of Perpetual Help",
-        "feastDate": "27-Jun",
-        "delegates": []
+        "titular": "Our Mother of Perpetual Help"
       },
       {
         "id": "most-holy-name-bobon",
         "name": "Most Holy Name of Jesus Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Fernando Bogtong",
         "address": "Bobon, 6410 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1697",
-        "titular": "Most Holy Name of Jesus",
-        "feastDate": "10-Aug",
-        "delegates": []
+        "titular": "Most Holy Name of Jesus"
       },
       {
         "id": "st-anthony-padua-mondragon",
         "name": "St. Anthony of Padua Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Sandy Quibal",
         "address": "Mondragon, 6417 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1894/1957",
-        "titular": "St. Anthony of Padua",
-        "feastDate": "12-Jun",
-        "delegates": []
+        "titular": "St. Anthony of Padua"
       },
       {
         "id": "st-anthony-padua-san-jose",
         "name": "St. Anthony of Padua Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Pio Aquiatan",
         "address": "San Jose, 6402 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1955",
-        "titular": "St. Anthony of Padua",
-        "feastDate": "29-Jul",
-        "delegates": []
+        "titular": "St. Anthony of Padua"
       },
       {
         "id": "nstra-sra-rosario",
         "name": "Parroquia de Nuestra Señora del Rosario",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Eruen Añosa",
         "address": "Rosario, 6416 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1996",
-        "titular": "Nuestra Señora del Rosario",
-        "feastDate": "7-Oct",
-        "delegates": []
+        "titular": "Nuestra Señora del Rosario"
       },
       {
         "id": "miraculous-medal-uep",
         "name": "Our Lady of the Miraculous Medal Chaplaincy",
-        "pastorTitle": "Chaplain",
-        "pastorModerator": "Rev. Msgr. Gaspar Balerite",
         "address": "UEP, 6400 Catarman Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "titular": "Our Lady of the Miraculous Medal",
-        "feastDate": "27-Nov",
-        "contact": "(055) 251 8611",
-        "delegates": []
+        "titular": "Our Lady of the Miraculous Medal"
       },
       {
         "id": "st-isidore-lope-de-vega",
         "name": "St. Isidore the Farmer",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Ruel Deterala",
         "address": "Lope de Vega, 6403 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "established": "1995",
-        "titular": "St. Isidore the Farmer",
-        "feastDate": "15-May",
-        "delegates": []
+        "titular": "St. Isidore the Farmer"
       },
       {
         "id": "st-joseph-polangi",
         "name": "St. Joseph Husband of Mary Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Anthony Salazar",
         "address": "Polangi, 6400 Catarman, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Joseph",
-        "titular": "St. Joseph Husband of Mary",
-        "delegates": []
+        "titular": "St. Joseph Husband of Mary"
       }
     ]
   },
@@ -141,81 +82,44 @@
       {
         "id": "st-michael-laoang",
         "name": "St. Michael the Archangel Parish",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Tobias Irinco",
         "address": "Laoang, 6411 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "1768",
-        "titular": "St. Michael the Archangel",
-        "feastDate": "29-Sep",
-        "contact": "(055) 251 9017",
-        "delegates": []
+        "titular": "St. Michael the Archangel"
       },
       {
         "id": "st-john-baptist-pambujan",
         "name": "St. John the Baptist Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Marlon Osal",
         "address": "Pambujan, 6413 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "1868",
-        "titular": "St. John the Baptist",
-        "feastDate": "24-Jun",
-        "delegates": []
+        "titular": "St. John the Baptist"
       },
       {
         "id": "st-roche-san-roque",
         "name": "St. Roche the Healer Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Otillo Lobriño, Jr.",
         "address": "San Roque, 6415 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "1962",
-        "titular": "St. Roche",
-        "feastDate": "16-Aug",
-        "delegates": []
+        "titular": "St. Roche"
       },
       {
         "id": "st-anthony-padua-rawis",
         "name": "St. Anthony of Padua Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Ronel Vilan",
         "address": "Rawis, 6411 Laoang, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "2000",
-        "titular": "St. Anthony of Padua",
-        "feastDate": "4-Jun",
-        "delegates": []
+        "titular": "St. Anthony of Padua"
       },
       {
         "id": "st-isidore-silvino-lobos",
         "name": "St. Isidore the Farmer Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Ariel Quibal",
         "address": "Silvino Lobos, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "2000",
-        "titular": "St. Isidore the Farmer",
-        "feastDate": "16-Jun",
-        "delegates": []
+        "titular": "St. Isidore the Farmer"
       },
       {
         "id": "our-lady-salvation-salvacion",
         "name": "Our Lady of Salvation Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Juvie Sabangan",
         "address": "Salvacion, 6411 Laoang, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Therese of the Child Jesus",
-        "established": "2000",
-        "titular": "Nuestra Señora de Salvacion",
-        "feastDate": "4-Aug",
-        "delegates": []
+        "titular": "Nuestra Señora de Salvacion"
       }
     ]
   },
@@ -226,105 +130,58 @@
       {
         "id": "st-james-allen",
         "name": "St. James the Greater Parish",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Diego Unay",
         "address": "Allen, 6405 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1867",
-        "titular": "St. James the Greater",
-        "feastDate": "25-Jul",
-        "delegates": []
+        "titular": "St. James the Greater"
       },
       {
         "id": "our-lady-assumption-lavezares",
         "name": "Our Lady of the Assumption Parish",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Fred Placa",
         "address": "Lavezares, 6404 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1895",
-        "titular": "Our Lady of the Assumption",
-        "feastDate": "22-Aug",
-        "delegates": []
+        "titular": "Our Lady of the Assumption"
       },
       {
         "id": "st-isidore-san-isidro",
-        "name": "St. Isidore Parish",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Tirso Giray",
+        "name": "Most Sacred Heart of Jesus Parish",
         "address": "San Isidro, 6409 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "titular": "St. Isidore",
-        "feastDate": "15-May",
-        "delegates": []
+        "titular": "Most Sacred Heart of Jesus Parish"
       },
       {
         "id": "st-anthony-padua-san-antonio",
         "name": "St. Anthony of Padua Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Charles Victorino Diaz",
         "address": "San Antonio, 6407 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1926",
-        "titular": "St. Anthony of Padua",
-        "feastDate": "13-Jun",
-        "delegates": []
+        "titular": "St. Anthony of Padua"
       },
       {
         "id": "st-anne-victoria",
         "name": "St. Anne Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Rico Manook",
         "address": "Victoria, 6406 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1996/2010",
-        "titular": "St. Anne",
-        "feastDate": "7-Aug",
-        "delegates": []
+        "titular": "St. Anne"
       },
       {
         "id": "st-vincent-ferrer-biri",
         "name": "St. Vincent Ferrer Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Zandro Gorgonia",
         "address": "Biri, 6401 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1996",
-        "titular": "St. Vincent Ferrer",
-        "feastDate": "25-Jun",
-        "delegates": []
+        "titular": "St. Vincent Ferrer"
       },
       {
         "id": "st-ignatius-capul",
         "name": "St. Ignatius of Loyola Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Elmer Lopez",
         "address": "Capul, 6408 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1559",
-        "titular": "St. Ignatius of Loyola",
-        "feastDate": "31-Jul",
-        "delegates": []
+        "titular": "St. Ignatius of Loyola"
       },
       {
         "id": "st-vincent-ferrer-san-vicente",
         "name": "St. Vincent Ferrer Mission Center",
-        "pastorTitle": "Administrator",
-        "pastorModerator": "Rev. Fr. Airies Bandilla",
         "address": "San Vicente, 6419 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "Immaculate Conception",
-        "established": "1996",
-        "titular": "St. Vincent Ferrer",
-        "feastDate": "29-Apr",
-        "delegates": []
+        "titular": "St. Vincent Ferrer"
       }
     ]
   },
@@ -335,95 +192,51 @@
       {
         "id": "our-lady-assumption-palapag",
         "name": "Our Lady of the Assumption",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Lito Jumadiao",
         "address": "Palapag, 6421 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1596/1674",
-        "titular": "Our Lady of the Assumption",
-        "feastDate": "15-Aug",
-        "delegates": []
+        "titular": "Our Lady of the Assumption"
       },
       {
         "id": "our-lady-nativity-las-navas",
         "name": "Our Lady of the Nativity",
-        "pastorTitle": "Pastor Moderator",
-        "pastorModerator": "Rev. Fr. Billy Quimbo",
         "address": "Las Navas, 6420 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1883",
-        "titular": "Our Lady of the Nativity",
-        "feastDate": "8-Sep",
-        "contact": "905 718 8872",
-        "delegates": []
+        "titular": "Our Lady of the Nativity"
       },
       {
         "id": "st-joseph-worker-catubig",
         "name": "St. Joseph the Worker Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Anelito Cesista",
         "address": "Catubig, 6418 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1596",
-        "titular": "St. Joseph the Worker",
-        "feastDate": "19-Jul",
-        "delegates": []
+        "titular": "St. Joseph the Worker"
       },
       {
         "id": "st-bonaventure-lapinig",
         "name": "St. Bonaventure Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Rey Lagrimas",
         "address": "Lapinig, 6423 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1963",
-        "titular": "St. Bonaventure",
-        "feastDate": "14-Jul",
-        "delegates": []
+        "titular": "St. Bonaventure"
       },
       {
         "id": "our-lady-angels-mapanas",
         "name": "Our Lady of the Angels",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Ariel Diaz",
         "address": "Mapanas, 6412 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1975",
-        "titular": "Our Lady of the Angels",
-        "feastDate": "19-Jul",
-        "delegates": []
+        "titular": "Our Lady of the Angels"
       },
       {
         "id": "st-michael-gamay",
         "name": "St. Michael the Archangel Parish",
-        "pastorTitle": "Pastor",
-        "pastorModerator": "Rev. Fr. Cleofas Añonuevo",
         "address": "Gamay, 6422 Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "1949",
-        "titular": "St. Michael the Archangel",
-        "feastDate": "15-Sep",
-        "delegates": []
+        "titular": "St. Michael the Archangel"
       },
       {
         "id": "holy-family-hibubullao",
         "name": "Holy Family Mission Center",
-        "pastorTitle": "Moderator",
-        "pastorModerator": "Rev. Fr. Anelito Cesista",
         "address": "Hibubullao, 6418 Catubig, Northern Samar",
-        "diocese": "Diocese of Catarman",
         "vicariate": "St. Michael the Archangel",
-        "established": "2008",
-        "titular": "Holy Family",
-        "feastDate": "28-Jun",
-        "contact": "Tel.: (055) 251-9017",
-        "delegates": []
+        "titular": "Holy Family"
       }
     ]
   }

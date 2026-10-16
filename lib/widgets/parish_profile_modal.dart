@@ -67,17 +67,6 @@ class _ParishProfileSheet extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              Text(
-                parish.name,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 16,
-                      color: AppColors.primary,
-                      height: 1.28,
-                    ),
-              ),
-              const SizedBox(height: 12),
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.fromLTRB(12, 10, 12, 4),
@@ -114,8 +103,6 @@ class _ParishProfileSheet extends StatelessWidget {
                         label: 'Established',
                         value: parish.established!,
                       ),
-                    if (parish.titular != null)
-                      _ProfileRow(label: 'Titular', value: parish.titular!),
                     if (parish.feastDate != null)
                       _ProfileRow(
                         label: 'Feast Date',
