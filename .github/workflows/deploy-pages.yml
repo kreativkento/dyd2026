@@ -1,6 +1,7 @@
 # Build Flutter web PWA and publish to GitHub Pages.
 # Repo Settings -> Pages -> Source: GitHub Actions
-# Live URL: https://kreativkento.github.io/dyd2026/
+# Live URL: https://app.dyd2026.arduadigitalsolutions.com/ (custom domain, base-href /)
+# Project Pages URL (if used): https://kreativkento.github.io/dyd2026/ needs base-href /dyd2026/
 
 name: Deploy PWA to GitHub Pages
 
@@ -41,7 +42,7 @@ jobs:
         run: dart run flutter_launcher_icons -f flutter_launcher_icons_web.yaml
 
       - name: Build web (PWA)
-        run: flutter build web --release --base-href "/dyd2026/"
+        run: flutter build web --release --base-href "/"
 
       - name: SPA fallback for GitHub Pages
         run: cp build/web/index.html build/web/404.html

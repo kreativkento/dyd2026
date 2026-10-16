@@ -1,10 +1,10 @@
 # Build Flutter web as a PWA (offline-first service worker) for GitHub Pages.
 #
-# Default base path matches: https://kreativkento.github.io/dyd2026/
-# Local testing:  .\scripts\build_web.ps1 -BaseHref "/"
+# Default base path matches custom domain root: https://app.dyd2026.arduadigitalsolutions.com/
+# GitHub project URL:  .\scripts\build_web.ps1 -BaseHref "/dyd2026/"
 
 param(
-    [string]$BaseHref = "/dyd2026/"
+    [string]$BaseHref = "/"
 )
 
 $ErrorActionPreference = "Stop"
