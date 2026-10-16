@@ -5,11 +5,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../core/services/pwa_install.dart';
 import '../core/theme/app_theme.dart';
 
-/// Shown on Android Chrome (and other Chromium browsers) when the PWA is not yet installed.
+/// Install hints for mobile browsers (Android Chrome install + iOS Safari Add to Home Screen).
 class PwaInstallBanner extends StatefulWidget {
   const PwaInstallBanner({super.key});
 
-  static const _prefsKey = 'pwa_install_banner_dismissed_v1';
+  static const _prefsKey = 'pwa_install_banner_dismissed_v2';
 
   @override
   State<PwaInstallBanner> createState() => _PwaInstallBannerState();
@@ -19,6 +19,8 @@ class _PwaInstallBannerState extends State<PwaInstallBanner> {
   bool _visible = false;
   bool _canInstall = false;
   bool _installing = false;
+  bool _isAndroid = false;
+  bool _isIos = false;
 
   @override
   void initState() {
@@ -30,32 +32,43 @@ class _PwaInstallBannerState extends State<PwaInstallBanner> {
   Future<void> _initWeb() async {
     if (PwaInstallPlatform.isStandalone) return;
 
+    _isAndroid = PwaInstallPlatform.isAndroidBrowser;
+    _isIos = PwaInstallPlatform.isIosBrowser;
+    if (!_isAndroid && !_isIos) return;
+
     final prefs = await SharedPreferences.getInstance();
     if (prefs.getBool(PwaInstallBanner._prefsKey) == true) return;
 
-    // iOS uses Safari "Add to Home Screen"; Android uses Chrome install criteria.
-    if (!PwaInstallPlatform.isAndroidBrowser) return;
+    if (_isAndroid) {
+      PwaInstallPlatform.listenForInstallAvailable(() {
+        if (mounted) {
+          setState(() {
+            _canInstall = true;
+            _visible = true;
+          });
+        }
+      });
 
-    PwaInstallPlatform.listenForInstallAvailable(() {
-      if (mounted) {
-        setState(() {
-          _canInstall = true;
-          _visible = true;
-        });
+      PwaInstallPlatform.listenForInstalled(() {
+        if (mounted) setState(() => _visible = false);
+      });
+
+      if (PwaInstallPlatform.canInstall) {
+        _canInstall = true;
       }
-    });
-
-    PwaInstallPlatform.listenForInstalled(() {
-      if (mounted) setState(() => _visible = false);
-    });
-
-    if (PwaInstallPlatform.canInstall) {
-      _canInstall = true;
     }
 
-    if (mounted) {
-      setState(() => _visible = true);
+    if (mounted) setState(() => _visible = true);
+  }
+
+  String get _helpText {
+    if (_isIos) {
+      return 'In Safari: tap Share (□↑) → Add to Home Screen. Stay online once so the app caches for offline use.';
     }
+    if (_canInstall) {
+      return 'Add the app to your home screen for full-screen offline use.';
+    }
+    return 'In Chrome: tap ⋮ (menu) → Install app. Use Chrome (not Facebook/Messenger in-app browser). Visit once online first.';
   }
 
   Future<void> _dismiss() async {
@@ -103,15 +116,13 @@ class _PwaInstallBannerState extends State<PwaInstallBanner> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      _canInstall
-                          ? 'Add the app to your home screen for full-screen offline use.'
-                          : 'In Chrome: tap ⋮ (menu) → Install app or Add to Home screen. Use Chrome, not an in-app browser.',
+                      _helpText,
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: Colors.white70,
                             height: 1.35,
                           ),
                     ),
-                    if (_canInstall) ...[
+                    if (_isAndroid && _canInstall) ...[
                       const SizedBox(height: 8),
                       FilledButton.icon(
                         onPressed: _installing ? null : _install,

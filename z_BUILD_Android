@@ -111,6 +111,8 @@ Use this when you want the **website** to install as an app **without** sideload
 
 If **Install app** is missing: update Chrome, avoid incognito, visit the site twice (Chrome engagement rules), or use the menu option above.
 
+**Note:** Flutter’s default web service worker no longer satisfies Android install rules; this project patches `flutter_service_worker.js` after each web build (see `scripts/patch_pwa_service_worker.py`).
+
 ---
 
 ## Install the APK on a phone

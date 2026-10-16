@@ -6,6 +6,8 @@ class PwaInstallPlatform {
 
   static bool get isAndroidBrowser => false;
 
+  static bool get isIosBrowser => false;
+
   static Future<bool> promptInstall() async => false;
 
   static void listenForInstallAvailable(void Function() onAvailable) {}

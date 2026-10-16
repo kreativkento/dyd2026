@@ -32,7 +32,7 @@
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>DYD 2026</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
   <script>
     // Chrome/Edge on Android: capture the install prompt for in-app "Install" button.
@@ -41,6 +41,10 @@
 
       function isAndroid() {
         return /Android/i.test(navigator.userAgent);
+      }
+
+      function isIOS() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
       }
 
       function isStandalone() {
@@ -57,6 +61,10 @@
 
       window.dydPwaIsAndroid = function () {
         return isAndroid();
+      };
+
+      window.dydPwaIsIOS = function () {
+        return isIOS();
       };
 
       window.dydPwaCanInstall = function () {

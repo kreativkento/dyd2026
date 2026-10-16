@@ -31,6 +31,10 @@ Write-Host "Building web release (PWA, base-href=$BaseHref)..."
 & "$FlutterBin\flutter.bat" pub get
 & "$FlutterBin\flutter.bat" build web --release --base-href $BaseHref
 
+Write-Host "Patching service worker for Android PWA install..."
+python (Join-Path $ProjectRoot "scripts\patch_pwa_service_worker.py")
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
 # GitHub Pages has no SPA rewrite; 404.html loads the app for deep links / refresh.
 $webOut = Join-Path $ProjectRoot "build\web"
 Copy-Item (Join-Path $webOut "index.html") (Join-Path $webOut "404.html") -Force

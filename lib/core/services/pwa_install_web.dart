@@ -10,6 +10,8 @@ class PwaInstallPlatform {
 
   static bool get isAndroidBrowser => _dydPwaIsAndroid();
 
+  static bool get isIosBrowser => _dydPwaIsIOS();
+
   static Future<bool> promptInstall() async {
     final result = await _dydPwaPromptInstall().toDart;
     return result.dartify() == true;
@@ -38,6 +40,9 @@ external bool _dydPwaIsStandalone();
 
 @JS('dydPwaIsAndroid')
 external bool _dydPwaIsAndroid();
+
+@JS('dydPwaIsIOS')
+external bool _dydPwaIsIOS();
 
 @JS('dydPwaPromptInstall')
 external JSPromise _dydPwaPromptInstall();
