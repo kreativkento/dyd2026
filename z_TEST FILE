@@ -1,0 +1,2 @@
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+powershell -ExecutionPolicy Bypass -File .\scripts\run_android.ps1

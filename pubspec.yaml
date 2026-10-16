@@ -1,0 +1,64 @@
+name: dyd2026
+description: DYD 2026 — offline static companion app for Diocese Youth Day.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  go_router: ^14.6.2
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  web:
+    generate: true
+    image_path: assets/images/dyd_logo.png
+    background_color: "#B91921"
+    theme_color: "#B91921"
+  image_path: assets/images/dyd_logo.png
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/images/dyd_logo.png
+    - assets/images/splash.png
+    - assets/images/dyd_cover.png
+    - assets/images/section_banner.png
+    - assets/images/host_parish.png
+    - assets/images/banners/
+    - assets/images/shirts/
+    - assets/images/dydlogo/
+    - assets/images/branding/
+    - assets/images/venue/
+    - assets/images/speakers/
+    - assets/images/parishes/
+    - assets/images/clusters/
+    - assets/images/groups/
+    # Flutter bundles only immediate children per folder; list each committee subdir.
+    - assets/images/committee/mo/
+    - assets/images/committee/gsec/
+    - assets/images/committee/prog/
+    - assets/images/committee/gserv/
+    - assets/images/committee/socom/
+    - assets/images/avatars/
+    - assets/images/avatars/img_avatar1.png
+    - assets/images/avatars/img_avatar2.png
+    - assets/images/avatars/img_avatar3.png
+    - assets/images/avatars/img_avatar4.png
+    - assets/people/

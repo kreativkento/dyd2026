@@ -1,0 +1,151 @@
+# Build DYD 2026 Android APK (Windows)
+
+Flutter release APK for sideloading (testing / sharing). The Android project is
+configured to sign release builds with the **debug keystore** so you do not need
+a Play Store signing key yet. For Play Store production, add a release keystore
+in `android/app/build.gradle.kts` later.
+
+---
+
+## Prerequisites (one-time)
+
+1. **Flutter** at `C:\flutter` (no spaces in path).
+   - Check: `C:\flutter\bin\flutter.bat doctor`
+2. **JDK 17** — this repo expects:
+   - `C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot`
+   - Install if missing: `winget install Microsoft.OpenJDK.17`
+3. **Android SDK** (Android Studio or command-line tools).
+   - Accept licenses: `flutter doctor --android-licenses`
+4. **Project folder** — open a terminal in:
+   - `C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026`
+
+---
+
+## Option A — Recommended (PowerShell script)
+
+From **PowerShell**, in the project root:
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+powershell -ExecutionPolicy Bypass -File .\scripts\build_android.ps1
+```
+
+When it finishes, the APK path is printed. Default output:
+
+`build\app\outputs\flutter-apk\app-release.apk`
+
+---
+
+## Option B — Run the same steps manually in terminal
+
+Copy and paste this block in **PowerShell** (adjust `JdkHome` if your JDK path differs):
+
+```powershell
+$ErrorActionPreference = "Stop"
+
+$FlutterBin = "C:\flutter\bin"
+$JdkHome = "C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot"
+$ProjectRoot = "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+
+$env:Path = "$FlutterBin;$JdkHome\bin;$env:Path"
+$env:JAVA_HOME = $JdkHome
+
+Set-Location $ProjectRoot
+
+& "$FlutterBin\flutter.bat" pub get
+& "$FlutterBin\flutter.bat" build apk --release
+
+$apk = Join-Path $ProjectRoot "build\app\outputs\flutter-apk\app-release.apk"
+Write-Host "APK ready: $apk"
+```
+
+---
+
+## Optional: smaller APK per CPU (split ABIs)
+
+One APK per architecture (smaller files; pick the one that matches the phone):
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+$env:Path = "C:\flutter\bin;$env:Path"
+$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot"
+
+flutter pub get
+flutter build apk --release --split-per-abi
+```
+
+Outputs (typical):
+
+- `build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk` (older 32-bit ARM)
+- `build\app\outputs\flutter-apk\app-arm64-v8a-release.apk` (most modern phones)
+- `build\app\outputs\flutter-apk\app-x86_64-release.apk` (emulators)
+
+---
+
+## Debug APK (quick test, not for distribution)
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+$env:Path = "C:\flutter\bin;$env:Path"
+$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot"
+
+flutter pub get
+flutter build apk --debug
+```
+
+Output: `build\app\outputs\flutter-apk\app-debug.apk`
+
+---
+
+## Install the APK on a phone
+
+**Without USB (share file):**
+
+1. Copy `app-release.apk` to the phone (Drive, email, messaging, etc.).
+2. Open the file on the phone and tap Install.
+3. Allow “Install unknown apps” for that app if Android asks.
+
+**With USB (ADB):**
+
+```powershell
+$adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe"
+& $adb install -r "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026\build\app\outputs\flutter-apk\app-release.apk"
+```
+
+(`-r` reinstalls over an existing install.)
+
+---
+
+## If the build fails
+
+Run diagnostics and fix what `doctor` reports:
+
+```powershell
+$env:Path = "C:\flutter\bin;$env:Path"
+$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot"
+flutter doctor -v
+```
+
+Common fixes:
+
+- **JDK not found** — set `JAVA_HOME` to JDK 17 (see blocks above).
+- **Android licenses** — `flutter doctor --android-licenses`
+- **Gradle / SDK** — open Android Studio once and install SDK Platform + Build-Tools for your Flutter version.
+
+Clean rebuild:
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+flutter clean
+flutter pub get
+flutter build apk --release
+```
+
+---
+
+## App identity (for reference)
+
+- Application ID: `com.example.dyd2026`
+- Version: see `version:` in `pubspec.yaml` (currently `1.0.0+1`)
+
+Change the application ID before publishing to Google Play.

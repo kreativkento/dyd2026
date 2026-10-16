@@ -1,0 +1,147 @@
+# DYD 2026 on iPhone — PWA + GitHub Pages (free hosting, offline)
+
+Apple does not let you sideload a Flutter **.ipa** without a Mac, Xcode, and a paid
+Developer account. The practical route for iPhone is a **Progressive Web App (PWA)**:
+build the same Flutter project for **web**, host it on **GitHub Pages** (HTTPS + free),
+then **Add to Home Screen** in Safari so it behaves like an installed app and works
+**offline** after the first load.
+
+Live site (after deploy):
+
+**https://kreativkento.github.io/dyd2026/**
+
+---
+
+## How it works (short)
+
+| Piece | Role |
+|--------|------|
+| `flutter build web` | Compiles your app + bundles JSON/images |
+| `manifest.json` + icons | “Installable” app name, colors, home-screen icon |
+| Flutter service worker | Caches the app shell and assets for offline use |
+| GitHub Pages | Free HTTPS hosting (required for PWA on iPhone) |
+| Safari → Add to Home Screen | Full-screen icon on the iPhone home screen |
+
+---
+
+## Part 1 — One-time GitHub setup
+
+1. Push this repo to **https://github.com/kreativkento/dyd2026** (already configured as `origin`).
+2. On GitHub: **Settings → Pages → Build and deployment**
+   - **Source:** **GitHub Actions** (not “Deploy from branch”).
+3. Ensure the default branch is **`main`** or **`master`** (the workflow listens to both).
+
+The workflow file is already in the repo:
+
+`.github/workflows/deploy-pages.yml`
+
+It runs on every push to `main`/`master`, builds the PWA with `--base-href "/dyd2026/"`, and publishes `build/web`.
+
+---
+
+## Part 2 — Deploy from your PC (push to trigger build)
+
+In **PowerShell**, from the project folder:
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+
+git add .
+git commit -m "Deploy PWA to GitHub Pages"
+git push origin main
+```
+
+If your branch is named `master`, use `git push origin master` instead.
+
+4. On GitHub: **Actions** tab → open **Deploy PWA to GitHub Pages** → wait for green check.
+5. Open **https://kreativkento.github.io/dyd2026/** in a browser to confirm.
+
+---
+
+## Part 3 — Build the PWA locally (optional, before push)
+
+Same build the CI runs:
+
+```powershell
+cd "C:\Users\Kent Veloso\Desktop\DEV PROJECTS\dyd2026"
+powershell -ExecutionPolicy Bypass -File .\scripts\build_web.ps1
+```
+
+Output folder: **`build\web`**
+
+- **`--base-href "/dyd2026/"`** matches GitHub Pages (repo name as subpath).
+- **`404.html`** is copied from **`index.html`** so deep links and refresh work on Pages.
+
+Test on your Wi‑Fi network before deploying:
+
+```powershell
+# Local-only base path (easier to serve)
+powershell -ExecutionPolicy Bypass -File .\scripts\build_web.ps1 -BaseHref "/"
+powershell -ExecutionPolicy Bypass -File .\scripts\serve_web.ps1
+```
+
+On iPhone (same Wi‑Fi): Safari → `http://<your-pc-ip>:8080`
+
+---
+
+## Part 4 — Install on iPhone (Add to Home Screen)
+
+Use **Safari** (Apple’s install flow for PWAs is Safari-first).
+
+1. Open **https://kreativkento.github.io/dyd2026/** in **Safari**.
+2. Wait until the app fully loads (splash → home). Stay on Wi‑Fi or cellular **online** for this first visit so the service worker can cache files.
+3. Tap **Share** (square with arrow).
+4. Tap **Add to Home Screen**.
+5. Name it **DYD 2026** → **Add**.
+
+You now have a home-screen icon that opens full-screen like a native app.
+
+---
+
+## Part 5 — Offline on iPhone
+
+1. After install, open **DYD 2026** from the home screen **once while online** and browse a few sections (Event, Directory, Resources). That pulls assets into the cache.
+2. Turn on **Airplane Mode** (or disable Wi‑Fi/data) and open the app again from the home screen.
+3. Content from bundled JSON/images should still work; that matches the offline Android app behavior.
+
+**Notes:**
+
+- The **first** visit must be online so Flutter’s service worker can install and cache.
+- **Google Fonts** may need one online session to download typefaces; after that they are usually cached.
+- iOS updates PWA storage policies occasionally; if something looks stale after a deploy, remove the home-screen icon, clear Safari website data for the site, revisit the URL online, and add to home screen again.
+
+---
+
+## Part 6 — Update the live PWA
+
+1. Edit JSON in `assets/data/` or images in `assets/images/`.
+2. Commit and push to `main` (or run the workflow manually: **Actions → Deploy PWA → Run workflow**).
+3. On iPhone: open the installed app **online** once so the new service worker can update.
+
+Bump **`version:`** in `pubspec.yaml` when you want to force cache refresh for users.
+
+---
+
+## Troubleshooting
+
+| Problem | Fix |
+|--------|-----|
+| Blank page on GitHub Pages | Confirm Pages source is **GitHub Actions**; check Actions log for build errors. |
+| 404 on refresh / deep link | Re-run build (script copies `404.html`); redeploy. |
+| Wrong paths / missing files | Rebuild with `--base-href "/dyd2026/"` (default in `build_web.ps1`). |
+| “Add to Home Screen” missing | Use Safari, not in-app browsers (Messenger, FB, etc.). |
+| Icons look generic | Run `dart run flutter_launcher_icons` (included in `build_web.ps1`). |
+
+Diagnostics on PC:
+
+```powershell
+$env:Path = "C:\flutter\bin;$env:Path"
+flutter doctor -v
+flutter build web --release --base-href "/dyd2026/"
+```
+
+---
+
+## Native iOS app (later, optional)
+
+If you later get a **Mac + Xcode + Apple Developer** account, you can ship a true App Store / TestFlight build with `flutter build ios`. Until then, the PWA path above is the standard way to run DYD 2026 on iPhone without a Mac.

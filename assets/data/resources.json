@@ -1,0 +1,173 @@
+{
+  "prayers": [],
+  "massGuide": {
+    "title": "Mass Guide",
+    "subtitle": "October 18, 2026 - Twenty-ninth Sunday in Ordinary Time",
+    "readings": [
+      {
+        "title": "First Reading",
+        "citation": "Isaiah 45:1, 4-6",
+        "content": "Thus says the Lord to his anointed, Cyrus, whose right hand I grasp, subduing nations before him, and making kings run in his service, opening doors before him and leaving the gates unbarred: For the sake of Jacob, my servant, of Israel, my chosen one, I have called you by your name, giving you a title, though you knew me not. I am the Lord and there is no other, there is no God besides me. It is I who arm you, though you know me not, so that toward the rising and the setting of the sun people may know that there is none besides me. I am the Lord, there is no other."
+      },
+      {
+        "title": "Responsorial Psalm",
+        "citation": "Psalm 96:1, 3, 4-5, 7-8, 9-10",
+        "response": "R. Give the Lord glory and honor.",
+        "content": {
+          "verses": [
+            {
+              "lines": [
+                "Sing to the Lord a new song;",
+                "sing to the Lord, all you lands.",
+                "Tell his glory among the nations;",
+                "among all peoples, his wondrous deeds."
+              ],
+              "response": "R."
+            },
+            {
+              "lines": [
+                "For great is the Lord and highly to be praised;",
+                "awesome is he, beyond all gods.",
+                "For all the gods of the nations are things of nought,",
+                "but the Lord made the heavens."
+              ],
+              "response": "R."
+            },
+            {
+              "lines": [
+                "Give to the Lord, you families of nations,",
+                "give to the Lord glory and praise;",
+                "give to the Lord the glory due his name!",
+                "Bring gifts, and enter his courts."
+              ],
+              "response": "R."
+            },
+            {
+              "lines": [
+                "Worship the Lord in holy attire.",
+                "Tremble before him, all the earth;",
+                "say among the nations: The Lord is king,",
+                "he governs the peoples with equity."
+              ],
+              "response": "R."
+            }
+          ]
+        }
+      },
+      {
+        "title": "Second Reading",
+        "citation": "1 Thessalonians 1:1-5b",
+        "content": "Paul and Sylvanus and Timothy: to the church of the Thessalonians, in God the Father, and in the Lord Jesus Christ.\nGrace be to you and peace. We give thanks to God always for you all; making a remembrance of you in our prayers without ceasing,\nBeing mindful of the work of your faith, and labour, and charity, and of the enduring of the hope of our Lord Jesus Christ before God and our Father:\nKnowing, brethren beloved of God, your election:\nFor our gospel hath not been unto you in word only, but in power also, and in the Holy Ghost, and in much fulness."
+      },
+      {
+        "title": "Gospel",
+        "citation": "Luke 18:1-8",
+        "content": "Jesus told his disciples a parable about the necessity for them to pray always without becoming weary.\n\nHe said, \"There was a judge in a certain town who neither feared God nor respected any human being. And a widow in that town used to come to him and say, 'Render a just decision for me against my adversary.' For a long time the judge was unwilling, but eventually he thought, 'While it is true that I neither fear God nor respect any human being, because this widow keeps bothering me I shall deliver a just decision for her lest she finally come and strike me.'\"\n\nThe Lord said, \"Pay attention to what the dishonest judge says. Will not God then secure the rights of his chosen ones who call out to him day and night? Will he be slow to answer them? I tell you, he will see to it that justice is done for them speedily. But when the Son of Man comes, will he find faith on earth?\""
+      }
+    ]
+  },
+  "themeSong": {
+    "title": "DYD Theme Song",
+    "tagline": "TAKE COURAGE! I HAVE OVERCOME THE WORLD (Jn 16:33)",
+    "sections": [
+      {
+        "label": "I.",
+        "kind": "verse",
+        "lines": [
+          "Woke up in a world that is full of distress",
+          "Voices in the shadows telling we are less",
+          "But we feel you Lord, staring something inside",
+          "A courage we can't deny"
+        ]
+      },
+      {
+        "label": "II.",
+        "kind": "verse",
+        "lines": [
+          "They say you must blend in and play the part",
+          "You're hiding the fire protecting your heart",
+          "Scrolling through the noise trying to find our place",
+          "But deep inside our soul, We hear you say"
+        ]
+      },
+      {
+        "label": "CHORUS:",
+        "kind": "chorus",
+        "lines": [
+          "Take courage, Pagmaisog, Pagmadasig",
+          "I have overcome, overcome the world",
+          "In every storm we defy our victory unfolds",
+          "When the fear is loud and our hope feels small",
+          "You are our strength",
+          "And with mother mary for us all",
+          "Raise young heart, Pagmaisog",
+          "Do not be afriad, He made us all to shine",
+          "You are Called by name"
+        ]
+      },
+      {
+        "label": "III.",
+        "kind": "verse",
+        "lines": [
+          "In the school halls, street lights, secret in the dark",
+          "Questions burn like wildfires, deep in our hearts",
+          "But in Jesus he's the truth that sets us free",
+          "We'll rise and be the change, you call us to be"
+        ]
+      },
+      {
+        "label": "BACK TO CHORUS",
+        "kind": "note",
+        "lines": []
+      },
+      {
+        "label": "CHORUS:",
+        "kind": "chorus",
+        "lines": [
+          "Take courage, Pagmaisog, Pagmadasig",
+          "I have overcome, overcome the world",
+          "In every storm we defy our victory unfolds",
+          "When the fear is loud and our hope feels small",
+          "You are our strength",
+          "And with mother mary for us all",
+          "Raise young heart, Pagmaisog",
+          "Do not be afriad, He made us all to shine",
+          "You are Called by name"
+        ]
+      },
+      {
+        "label": "IV.",
+        "kind": "verse",
+        "lines": [
+          "We are the generations, fearless and faithful",
+          "With hearts all surrendered, with Jesus Christ our Lord",
+          "Death you conquered and now we will live",
+          "For hope, for truth and for the love you gave"
+        ]
+      },
+      {
+        "label": "CHORUS:",
+        "kind": "chorus",
+        "lines": [
+          "Take courage, Pagmaisog, Pagmadasig",
+          "I have overcome, overcome the world",
+          "In every storm we defy our victory unfolds",
+          "When the fear is loud and our hope feels small",
+          "You are our strength",
+          "And with mother mary for us all",
+          "Raise young heart, Pagmaisog",
+          "Do not be afriad, He made us all to shine",
+          "You are Called by name",
+          "So Raise young heart, Pagmaisog",
+          "Do not be afriad, He made us all to shine",
+          "You are Called by name"
+        ]
+      },
+      {
+        "label": "TAKE COURAGE, PAGMAISOG, PAGMADASIG!",
+        "kind": "finale",
+        "lines": []
+      }
+    ]
+  }
+}

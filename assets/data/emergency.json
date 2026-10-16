@@ -1,0 +1,42 @@
+{
+  "firstAid": [
+    {
+      "title": "Heat Exhaustion",
+      "body": "Move the person to a shaded or cool area. Give water in small sips. Loosen tight clothing. Seek medical help if symptoms persist (dizziness, nausea, rapid pulse)."
+    },
+    {
+      "title": "Minor Cuts & Wounds",
+      "body": "Wash hands before treating. Clean the wound with clean water. Apply pressure with a clean cloth to stop bleeding. Cover with a bandage. Visit the medical team if bleeding does not stop."
+    },
+    {
+      "title": "Fainting",
+      "body": "Lay the person flat and elevate legs slightly. Ensure adequate airflow. Do not give food or drink until fully conscious. Alert the Medical & DRRM Team immediately."
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Bureau of Fire Protection (BFP)",
+      "number": "TM (0955-751-1007)\nTNT (0912-456-6161)"
+    },
+    {
+      "name": "Disaster Risk Reduction & Management (MDRRMO)",
+      "number": "TM (0997-312-0983)"
+    },
+    {
+      "name": "Municipal Social Welfare & Development Office (MSWDO)",
+      "number": "0917-623-1979"
+    },
+    {
+      "name": "Rural Health Unit (RHU)",
+      "number": "0967-014-8168"
+    },
+    {
+      "name": "San Isidro Municipal Police Station (MPS)",
+      "number": "0998-598-5440"
+    },
+    {
+      "name": "Coast Guard",
+      "number": "0929-378-4385"
+    }
+  ]
+}

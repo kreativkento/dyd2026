@@ -1,0 +1,48 @@
+{
+  "assemblyPoints": [
+    {
+      "name": "Main Gate Assembly",
+      "location": "Front entrance of venue",
+      "notes": "Cluster A & B meet here at 6:00 AM"
+    },
+    {
+      "name": "Gymnasium Side Entrance",
+      "location": "East wing of venue",
+      "notes": "Cluster C & D meet here at 6:00 AM"
+    },
+    {
+      "name": "Parking Lot B",
+      "location": "South parking area",
+      "notes": "Service vehicles and late arrivals"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-a1",
+      "name": "Facebook — Group 1",
+      "cluster": "Facebook",
+      "assemblyPoint": "Main Gate Assembly",
+      "members": [
+        { "name": "Youth Member 1", "role": "Leader", "parish": "St. Sample Parish" },
+        { "name": "Youth Member 2", "role": "Member", "parish": "St. Sample Parish" },
+        { "name": "Youth Member 3", "role": "Member", "parish": "Our Lady of Sample Parish" }
+      ]
+    },
+    {
+      "id": "group-a2",
+      "name": "Instagram — Group 1",
+      "cluster": "Instagram",
+      "assemblyPoint": "Main Gate Assembly",
+      "members": [
+        { "name": "Youth Member 4", "role": "Leader", "parish": "Sacred Heart Parish" }
+      ]
+    },
+    {
+      "id": "group-b1",
+      "name": "TikTok — Group 1",
+      "cluster": "TikTok",
+      "assemblyPoint": "Main Gate Assembly",
+      "members": []
+    }
+  ]
+}

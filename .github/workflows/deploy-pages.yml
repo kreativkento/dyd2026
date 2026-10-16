@@ -1,0 +1,59 @@
+# Build Flutter web PWA and publish to GitHub Pages.
+# Repo Settings -> Pages -> Source: GitHub Actions
+# Live URL: https://kreativkento.github.io/dyd2026/
+
+name: Deploy PWA to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate PWA icons
+        run: dart run flutter_launcher_icons -f flutter_launcher_icons_web.yaml
+
+      - name: Build web (PWA)
+        run: flutter build web --release --base-href "/dyd2026/"
+
+      - name: SPA fallback for GitHub Pages
+        run: cp build/web/index.html build/web/404.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
