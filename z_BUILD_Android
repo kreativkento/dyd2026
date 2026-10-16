@@ -97,6 +97,22 @@ Output: `build\app\outputs\flutter-apk\app-debug.apk`
 
 ---
 
+## Install from the browser (PWA — like iPhone “Add to Home Screen”)
+
+Use this when you want the **website** to install as an app **without** sideloading an APK.
+
+1. On the phone, open **Google Chrome** (not Facebook/Messenger in-app browser).
+2. Go to **https://app.dyd2026.arduadigitalsolutions.com/**
+3. Wait until the app fully loads (stay **online** once so the service worker caches files).
+4. Either:
+   - Tap **Install app** on the banner at the bottom of the screen, or
+   - Tap Chrome **⋮** (menu) → **Install app** or **Add to Home screen**.
+5. Open **DYD 2026** from the home screen; it should run full-screen like a native app.
+
+If **Install app** is missing: update Chrome, avoid incognito, visit the site twice (Chrome engagement rules), or use the menu option above.
+
+---
+
 ## Install the APK on a phone
 
 **Without USB (share file):**

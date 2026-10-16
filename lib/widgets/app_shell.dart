@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../core/theme/app_theme.dart';
+import 'pwa_install_banner.dart';
 import 'top_nav_overlay.dart';
 
 class AppShell extends StatelessWidget {
@@ -19,16 +20,23 @@ class AppShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        clipBehavior: Clip.none,
+      body: Column(
         children: [
-          navigationShell,
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: TopNavOverlay(navigationShell: navigationShell),
+          Expanded(
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                navigationShell,
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  child: TopNavOverlay(navigationShell: navigationShell),
+                ),
+              ],
+            ),
           ),
+          const PwaInstallBanner(),
         ],
       ),
       bottomNavigationBar: _MainNavBar(

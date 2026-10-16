@@ -33,6 +33,56 @@
 
   <title>DYD 2026</title>
   <link rel="manifest" href="manifest.json">
+
+  <script>
+    // Chrome/Edge on Android: capture the install prompt for in-app "Install" button.
+    (function () {
+      var deferredPrompt = null;
+
+      function isAndroid() {
+        return /Android/i.test(navigator.userAgent);
+      }
+
+      function isStandalone() {
+        return (
+          window.matchMedia('(display-mode: standalone)').matches ||
+          window.matchMedia('(display-mode: fullscreen)').matches ||
+          window.navigator.standalone === true
+        );
+      }
+
+      window.dydPwaIsStandalone = function () {
+        return isStandalone();
+      };
+
+      window.dydPwaIsAndroid = function () {
+        return isAndroid();
+      };
+
+      window.dydPwaCanInstall = function () {
+        return !!deferredPrompt;
+      };
+
+      window.dydPwaPromptInstall = async function () {
+        if (!deferredPrompt) return false;
+        deferredPrompt.prompt();
+        var choice = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        return choice.outcome === 'accepted';
+      };
+
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        window.dispatchEvent(new Event('dyd-pwa-install-available'));
+      });
+
+      window.addEventListener('appinstalled', function () {
+        deferredPrompt = null;
+        window.dispatchEvent(new Event('dyd-pwa-installed'));
+      });
+    })();
+  </script>
 </head>
 <body>
   <!--

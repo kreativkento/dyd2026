@@ -42,7 +42,7 @@ jobs:
         run: dart run flutter_launcher_icons -f flutter_launcher_icons_web.yaml
 
       - name: Build web (PWA)
-        run: flutter build web --release --base-href "/"
+        run: flutter build web --release --base-href "/" --pwa-strategy offline-first
 
       - name: SPA fallback for GitHub Pages
         run: cp build/web/index.html build/web/404.html
